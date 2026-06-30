@@ -182,11 +182,11 @@ nsv=5; % number of selected eigenvalues (ordered)
 
 
 indf_ini=665+52+52+52; % time index of the EW 41 2025
-indf_end=716+52+52+52; % time index of the EW 40 2026
+indf_end=716+52+52+52+1; % time index of the EW 41 2026
 
 % Writes a CSV file with the known and forecast data
 
-date=S_dates(indf_ini:indf_end);  % epidemic weeks to be forecast 
+date=S_dates(823:875);  % Sunday days for validation 4 (53 EWs)
 pred_range=indf_end+1-indf_ini; % forecast range
 gapf=15;  % gap in samples from EW 26 2025 to EW 40 2025  
 pred(1:gapf)=[]; pred=pred(1:pred_range);
